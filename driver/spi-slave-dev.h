@@ -12,6 +12,10 @@
 #define SPISLAVE_H
 
 #include <linux/types.h>
+#include <linux/version.h>
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 11, 0)
+#include <linux/sched/signal.h>
+#endif
 
 #define SPISLAVE_IOCTL_MAGIC		'k'
 
